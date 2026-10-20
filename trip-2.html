@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortune Rice Bran Oil Walkathon 2026 | Wandering with Fahad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Wandering with Fahad</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="trips.html">Trips</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="article">
+
+      <h1>My First Walkathon</h1>
+      <p class="meta">
+        03 October 2026 · Hatirjheel Amphitheatre
+      </p>
+
+      <video class="story-video" controls playsinline preload="metadata">
+        <source src="images/walkathon2026.mp4" type="video/mp4">
+      </video>
+      <p class="caption">Fortune Rice Bran Oil Walkathon 2026.</p>
+
+      <h2>Getting There</h2>
+      <p>
+        After my first running event, I was curious to try something different, and the
+        Fortune Rice Bran Oil Walkathon 2026 at Hatirjheel Amphitheatre was the perfect chance.
+        It was my first-ever walkathon, and I headed there excited to see how it would feel
+        compared to a race.
+        <!-- ADD YOUR OWN DETAILS: what time you left, how you travelled, who you went with. -->
+      </p>
+
+      <h2>What I Saw</h2>
+      <p>
+        The place was full of energy. People of every age came together to walk, stay active,
+        and enjoy the morning as one community. A walkathon feels different from a race:
+        there is less pressure and more smiling, chatting and sharing the moment with others.
+        <!-- ADD YOUR OWN DETAILS: who you met, what you saw, what stood out to you. -->
+      </p>
+
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img src="images/IMG_20261003_065444.jpg" alt="One step closer.">
+      </div>
+
+      <h2>My Experience</h2>
+      <p>
+        The Fortune Rice Bran Oil Walkathon 2026 was a refreshing and memorable experience.
+        It let me enjoy the energetic atmosphere, stay active, and be part of a wonderful
+        community event. This walkathon marked another exciting milestone in my journey of
+        exploring new experiences and creating unforgettable memories. ❤️
+      </p>
+      <p>
+        My tip for anyone thinking about joining one: you do not need to be a runner.
+        Come, walk at your own pace, enjoy the people around you, and take it all in.
+      </p>
+
+      <a class="back-link" href="index.html">← Back to all trips</a>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Wandering with Fahad. All photos and words are my own.</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+    }
+
+    lightbox.addEventListener('click', function (e) {
+      if (e.target !== lightboxImg) closeLightbox();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Trip | Wandering with Fahad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Wandering with Fahad</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="trips.html">Trips</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="article">
+
+      <h1>My First Running Event</h1>
+      <p class="meta">
+        18th September 2026 · Hatirjheel Amphitheatre.
+      </p>
+
+      <video class="story-video" controls playsinline preload="metadata">
+        <source src="images/1000053729.mp4" type="video/mp4">
+      </video>
+      <p class="caption">A sea of red running together.</p>
+
+      <h2>Getting There</h2>
+      <p>
+        I woke up at 3:00 AM and left home at around 3:45 AM, taking an Uber to Hatirjheel.
+        I arrived there around 4:00–4:10 AM, ready for my first-ever running event.
+        At first, waking up so early felt like a big effort, but as I looked around and felt the atmosphere of the event, 
+        I realized that coming here this morning was one of the best decisions I had ever made. The excitement, the energy, 
+        and the feeling of being part of something special made every bit of the early morning journey worthwhile.
+      </p>
+
+      <h2>What I Saw</h2>
+      <p>
+        One of the best parts of the event was getting to meet some professional runners, pacers, and podium finishers in person for the first time. 
+        It was inspiring to see so many passionate runners gathered in one place. 
+        I also met Rafsan the ChotoBhai for the first time and got the opportunity to take a selfie with him. 
+        These little moments made my first running event even more memorable and gave me some amazing memories to look back on.
+      </p>
+
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <img src="images/1000053646.jpg" alt="The Moment Captured">
+        <img src="images/1000053611.jpg" alt="Finishers Medal (Front View)">
+        <img src="images/1000053598.jpg" alt="Finishers Medal (Back View)">
+        <img src="images/1000053583.jpg" alt="Early Morning Event Gathering">
+      </div>
+
+      <h2>My Experience</h2>
+      <p>
+        A morning I'll never forget. 🏃‍♂️
+        My first-ever running event was more than just a race; it was an experience filled with excitement, new faces, and unforgettable memories. 
+        Waking up at 3 AM and heading to Hatirjheel Amphitheatre felt worth it the moment I experienced the atmosphere.
+        From seeing professional runners, pacers, and podium finishers to meeting Rafsan the ChotoBhai and taking a selfie with him, every moment made the day special. 
+        Crossing into this new experience gave me a sense of achievement and inspired me to explore more challenges in life.
+        I may have started as a beginner, but this event gave me a beautiful memory and a new reason to keep moving forward.
+        This is just the beginning of my journey. One run, one experience, and one memory at a time. ❤️
+        
+      </p>
+      <p>
+        My tip for first-timers: Don't overthink it. Wake up, show up, enjoy the atmosphere, and make memories. 
+        Sometimes, the best experiences begin before sunrise.
+      </p>
+
+      <a class="back-link" href="index.html">← Back to all trips</a>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Wandering with Fahad. All photos and words are my own.</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('.gallery img').forEach(function (img) {
+    img.addEventListener('click', function () {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+  }
+
+  lightbox.addEventListener('click', function (e) {
+    if (e.target !== lightboxImg) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+</body>
+</html>
